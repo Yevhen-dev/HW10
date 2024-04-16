@@ -1,0 +1,251 @@
+html {
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(255, 176, 132);
+}
+
+ul {
+  margin: 0;
+}
+
+.main {
+  padding: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr 20px 0.5fr 20px 0.5fr 20px 0.5fr;
+  grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
+  gap: 20px;
+      grid-template-areas: "person bio bio" "person goals frustrations" "person dream frustrations" "slogan dream personality";
+}
+@media (max-width: 992px) {
+  .main {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[4];
+    grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "person bio" "person slogan" "dream frustrations" "goals personality";
+  }
+}
+@media (max-width: 720px) {
+  .main {
+    display: block;
+  }
+  .main div {
+    margin-top: 15px;
+  }
+}
+.main .main__person {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 7px 7px 0 0 rgb(0, 0, 0);
+          box-shadow: 7px 7px 0 0 rgb(0, 0, 0);
+  font-size: 1.4rem;
+  grid-area: person;
+}
+.main .main__person h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+.main .main__person h2 {
+  color: rgb(0, 0, 0);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.main .main__person div {
+  padding: 5px 0;
+}
+.main .main__person span {
+  font-weight: 700;
+}
+.main .main__person .main__person__name-avatar {
+  text-align: center;
+}
+.main .main__person .main__person__age-pronouns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main .main__person .main__person__age-pronouns .main__person__age-pronouns__pronouns {
+  padding-left: 15px;
+}
+.main .main__bio {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 7px 7px 0 0 rgb(0, 0, 0);
+          box-shadow: 7px 7px 0 0 rgb(0, 0, 0);
+  font-size: 1.4rem;
+  grid-area: bio;
+}
+.main .main__bio h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+.main .main__bio h2 {
+  color: rgb(0, 0, 0);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.main .main__goals {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 7px 7px 0 0 rgb(41, 167, 30);
+          box-shadow: 7px 7px 0 0 rgb(41, 167, 30);
+  font-size: 1.4rem;
+  grid-area: goals;
+}
+.main .main__goals h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+.main .main__goals h2 {
+  color: rgb(41, 167, 30);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.main .main__frustrations {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 5;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 7px 7px 0 0 rgb(225, 53, 53);
+          box-shadow: 7px 7px 0 0 rgb(225, 53, 53);
+  font-size: 1.4rem;
+  grid-area: frustrations;
+}
+.main .main__frustrations h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+.main .main__frustrations h2 {
+  color: rgb(225, 53, 53);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.main .main__dream {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 7px 7px 0 0 rgb(54, 117, 176);
+          box-shadow: 7px 7px 0 0 rgb(54, 117, 176);
+  font-size: 1.4rem;
+  grid-area: dream;
+}
+.main .main__dream h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+.main .main__dream h2 {
+  color: rgb(54, 117, 176);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.main .main__slogan {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 7px 7px 0 0 rgb(0, 0, 0);
+          box-shadow: 7px 7px 0 0 rgb(0, 0, 0);
+  font-size: 1.4rem;
+  grid-area: slogan;
+}
+.main .main__slogan h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+.main .main__slogan h2 {
+  color: rgb(0, 0, 0);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.main .main__personality {
+  -ms-grid-row: 7;
+  -ms-grid-column: 5;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 7px 7px 0 0 rgb(0, 0, 0);
+          box-shadow: 7px 7px 0 0 rgb(0, 0, 0);
+  font-size: 1.4rem;
+  grid-area: personality;
+}
+@media (max-width: 992px) {
+  .main .main__person {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+  }
+  .main .main__bio {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+  .main .main__goals {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .main .main__frustrations {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+  }
+  .main .main__dream {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  .main .main__slogan {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .main .main__personality {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+}
+.main .main__personality h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+.main .main__personality h2 {
+  color: rgb(0, 0, 0);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
